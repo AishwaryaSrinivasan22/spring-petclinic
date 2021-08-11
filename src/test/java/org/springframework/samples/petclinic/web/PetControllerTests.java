@@ -104,10 +104,10 @@ public class PetControllerTests {
             .param("name", "Betty")
             .param("birthDate", "2015/02/12")
         )
-            .andExpect(model().attributeHasNoErrors("owwwner"))
-            .andExpect(model().attributeHasErrors("petttt"))
+            .andExpect(model().attributeHasNoErrors("owner"))
+            .andExpect(model().attributeHasErrors("pet"))
             .andExpect(status().isOk())
-            .andExpect(view().name("peeeeeets/createOrUpdatePetForm"));
+            .andExpect(view().name("pets/createOrUpdatePetForm"));
     }
 
 }
